@@ -10,6 +10,16 @@ This gem is a [Alchemy CMS](https://github.com/magiclabs/alchemy_cms) and [Spree
 2. It gives you new Essences for Alchemy called EssenceSpreeProduct and EssenceSpreeTaxon that you can use to place a Spree product and Taxon on your pages.
 3. Shares admin session between Alchemy and Spree.
 
+### Compatibility
+
+## Spree
+
+This version runs with Spreecommerce 2.0
+
+## Alchemy
+
+This version runs with Alchemy 2.7
+
 ## Installation
 
 Add this line to your application's Gemfile:
