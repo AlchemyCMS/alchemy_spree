@@ -7,7 +7,7 @@ module Alchemy
       preview_text_method: 'name'
     )
 
-    attr_accessible :spree_product_id
+    #attr_accessible :spree_product_id
 
     def ingredient
       product
