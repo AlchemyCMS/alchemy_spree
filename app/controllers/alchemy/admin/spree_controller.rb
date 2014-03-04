@@ -21,7 +21,4 @@ class Alchemy::Admin::SpreeController < Alchemy::Admin::BaseController
       params.permit(:spree_product_id)
     end
 
-  end
-
-
 end
