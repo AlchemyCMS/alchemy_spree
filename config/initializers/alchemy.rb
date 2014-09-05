@@ -8,3 +8,5 @@ Alchemy::Modules.register_module({
     image: '/assets/alchemy_spree/alchemy_module_icon.png'
   }
 })
+
+Alchemy.user_class_name = "Alchemy::User"
