@@ -1,4 +1,4 @@
-Alchemy::User.class_eval do
+Alchemy.user_class.class_eval do
 
   def spree_roles
     if admin?
