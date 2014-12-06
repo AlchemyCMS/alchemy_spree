@@ -8,7 +8,7 @@ module Spree
     end
 
     def spree_current_user
-      current_user
+      alchemy.current_user
     end
 
     def spree_login_path
