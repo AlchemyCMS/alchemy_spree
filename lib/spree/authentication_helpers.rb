@@ -8,19 +8,19 @@ module Spree
     end
 
     def spree_current_user
-      alchemy.current_user
+      send Alchemy.current_user_method
     end
 
     def spree_login_path
-      alchemy.login_path
+      Alchemy.login_path
     end
 
     def spree_signup_path
-      alchemy.signup_path
+      Alchemy.signup_path
     end
 
     def spree_logout_path
-      alchemy.logout_path
+      Alchemy.logout_path
     end
   end
 end
