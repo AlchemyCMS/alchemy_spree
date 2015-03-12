@@ -17,28 +17,8 @@
     });
 
     $frame.on('load', function() {
-      var frame_document;
-      var frame_window = (this.contentWindow || this.contentDocument);
-      var elements = ['header', 'footer', 'admin-menu', 'sub-menu', 'content'];
       spinner.stop();
-      if (frame_window.document) {
-        frame_document = frame_window.document;
-      } else {
-        frame_document = frame_window;
-        frame_window = frame_document.window;
-      }
-      frame_document.body.style.backgroundColor = '#fff';
-      frame_document.body.style.fontFamily = '"Lucida Grande", Arial, sans-serif';
-      frame_document.body.style.fontSize = '12px';
-      for (var i = elements.length - 1; i >= 0; i--) {
-        element = frame_document.getElementById(elements[i]);
-        if (element) {
-          if (element.id === 'header' || element.id === 'footer') element.style.display = 'none';
-          element.style.margin = 0;
-        }
-      }
       sizeSpreeFrame();
-      $('#frame_load_info').hide();
       $frame.show();
     });
 
