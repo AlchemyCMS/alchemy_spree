@@ -153,10 +153,13 @@ and follow the on screen instructions.
 If you plan to render Alchemy content in your Spree views (ie. a global header or footer section), you need to include the Alchemy view helpers and language store in your Spree controllers.
 
 ```ruby
-# config/initializers/spree.rb
+# config/application.rb
 ...
-Spree::BaseController.class_eval do
-  include Alchemy::ControllerActions
+config.to_prepare do
+  ...
+  Spree::BaseController.class_eval do
+    include Alchemy::ControllerActions
+  end
 end
 ```
 
@@ -165,10 +168,13 @@ end
 If you also use the `Spree::User` class you need to additionally tell the Spree user sessions controller to include the Alchemy related helpers and methods.
 
 ```ruby
-# config/initializers/spree.rb
+# config/application.rb
 ...
-Spree::UserSessionsController.class_eval do
-  include Alchemy::ControllerActions
+config.to_prepare do
+  ...
+  Spree::UserSessionsController.class_eval do
+    include Alchemy::ControllerActions
+  end
 end
 ```
 
