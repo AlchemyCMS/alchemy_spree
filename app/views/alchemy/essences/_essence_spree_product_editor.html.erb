@@ -1,9 +1,15 @@
-<div class="content_editor essence_spree_product">
-  <label><%= render_content_name(content) %></label>
+<div class="content_editor essence_spree_product essence_select">
+  <%= label_and_remove_link(content) %>
   <%= select_tag(
     content.form_field_name,
-    options_from_collection_for_select(Spree::Product.not_deleted, :id, :name, content.essence.spree_product_id),
-    class: ['alchemy_selectbox very_long', html_options[:class]].join(' '),
+    options_from_collection_for_select(
+      local_assigns.fetch(:options, {})[:products] || Spree::Product.not_deleted,
+      :id,
+      :name,
+      content.essence.spree_product_id
+    ),
+    include_blank: true,
+    class: ["alchemy_selectbox", "essence_editor_select", html_options[:class]].join(' '),
     style: html_options[:style]
   ) %>
 </div>
