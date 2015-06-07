@@ -63,6 +63,13 @@ require 'alchemy/spree/spree_user_decorator'
 Alchemy::BaseHelper.send :include, Spree::BaseHelper
 Alchemy::BaseController.send :include, Spree::Core::ControllerHelpers::Common
 Alchemy::BaseController.send :include, Spree::Core::ControllerHelpers::Store
+Alchemy::BaseController.send :include, Spree::Core::ControllerHelpers::Order
+Alchemy::BaseController.send :include, Spree::Core::ControllerHelpers::Auth
+
+# Include the Alchemy related helpers and methods
+# to render Alchemy content in Spree views (ie. a global header or footer section)
+Spree::BaseController.send :include, Alchemy::ControllerActions
+Spree::UserSessionsController.send :include, Alchemy::ControllerActions
 ```
 
 #### 2. Option: Use [Alchemy Devise](https://github.com/magiclabs/alchemy-devise)

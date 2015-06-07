@@ -7,6 +7,7 @@ module Alchemy
       engine_name 'alchemy_spree'
 
       def self.activate
+        ::Spree::Ability.register_ability(::Alchemy::Spree::Ability)
         Alchemy.register_ability(::Alchemy::Spree::Ability)
         Alchemy.register_ability(::Spree::Ability)
       end
