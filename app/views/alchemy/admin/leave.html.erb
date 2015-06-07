@@ -9,3 +9,7 @@
   <label><%= _t('or to completely') %></label>
   <%= link_to _t(:logout), spree_logout_path, class: 'button' %>
 </p>
+<p class="buttons">
+  <label><%= _t('or go back to Spree') %></label>
+  <%= link_to _t(:spree), spree.admin_path, class: 'button' %>
+</p>
