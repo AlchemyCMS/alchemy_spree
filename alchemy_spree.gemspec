@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["tvd@magiclabs.de"]
   gem.description   = %q{A Alchemy CMS and Spree connector}
   gem.summary       = %q{The World's Most Flexible E-Commerce Platform meets The World's Most Flexible Content Management System!}
-  gem.homepage      = "https://github.com/magiclabs/alchemy_spree"
+  gem.homepage      = "https://github.com/AlchemyCMS/alchemy_spree"
   gem.license       = 'BSD New'
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
@@ -15,6 +15,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Alchemy::Spree::VERSION
 
-  gem.add_dependency('alchemy_cms', ['~> 3.1'])
+  gem.add_dependency('alchemy_cms', ['>= 3.3.0.rc1', '< 4.0'])
   gem.add_dependency('spree', ['>= 3.0', '< 4.0'])
 end

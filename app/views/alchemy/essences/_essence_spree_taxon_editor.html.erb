@@ -1,5 +1,5 @@
 <div class="content_editor essence_spree_taxon essence_select">
-  <%= label_and_remove_link(content) %>
+  <%= content_label(content) %>
   <%= select_tag(
     content.form_field_name,
     option_groups_from_collection_for_select(
