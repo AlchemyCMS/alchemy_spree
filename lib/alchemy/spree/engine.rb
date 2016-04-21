@@ -1,4 +1,3 @@
-require 'alchemy/spree/ability'
 require 'spree'
 
 module Alchemy
@@ -7,7 +6,6 @@ module Alchemy
       engine_name 'alchemy_spree'
 
       def self.activate
-        Alchemy.register_ability(::Alchemy::Spree::Ability)
         Alchemy.register_ability(::Spree::Ability)
       end
 
