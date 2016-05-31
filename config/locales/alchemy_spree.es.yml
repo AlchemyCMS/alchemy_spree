@@ -1,0 +1,7 @@
+es:
+  alchemy:
+    essences:
+      essence_spree_product_editor:
+        none: "Ninguno"
+      essence_spree_taxon_editor:
+        none: "Ninguno"
