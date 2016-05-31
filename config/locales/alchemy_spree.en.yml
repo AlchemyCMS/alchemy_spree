@@ -3,3 +3,5 @@ en:
     essences:
       essence_spree_product_editor:
         none: "None"
+      essence_spree_taxon_editor:
+        none: "None"
