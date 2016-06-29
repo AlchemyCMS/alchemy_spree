@@ -2,12 +2,10 @@
   <%= content_label(content) %>
   <%= select_tag(
     content.form_field_name,
-    option_groups_from_collection_for_select(
+    options_from_collection_for_select(
       local_assigns.fetch(:options, {})[:taxons] || Spree::Taxon.all,
-      :children,
-      :name,
       :id,
-      :name,
+      :pretty_name,
       content.essence.taxon_id
     ),
     include_blank: t(".none"),
